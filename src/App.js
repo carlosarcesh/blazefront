@@ -160,27 +160,27 @@ class App extends React.Component {
                 <div className="col-lg-12">
                     <div className="form-group">
                         <label htmlFor="firstname" className="form-label">First Name</label>
-                        <input type="text" name="firstname" className="form-control" defaultValue={this.state.firstName}
+                        <input type="text" name="firstname" className="form-control" defaultValue={type === 'create' ? null : this.state.firstName}
                                onChange={e => this.setState({firstName: e.target.value})}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="lastname" className="form-label">Last Name</label>
-                        <input type="text" name="lastname" className="form-control" defaultValue={this.state.lastName}
+                        <input type="text" name="lastname" className="form-control" defaultValue={type === 'create' ? null : this.state.lastName}
                                onChange={e => this.setState({lastName: e.target.value})}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="email" className="form-label">Email</label>
-                        <input type="email" name="email" className="form-control" defaultValue={this.state.email}
+                        <input type="email" name="email" className="form-control" defaultValue={type === 'create' ? null : this.state.email}
                                onChange={e => this.setState({email: e.target.value})}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="phone" className="form-label">Phone Number</label>
-                        <input type="tel" name="phone" className="form-control" defaultValue={this.state.phoneNumber}
+                        <input type="tel" name="phone" className="form-control" defaultValue={type === 'create' ? null : this.state.phoneNumber}
                                onChange={e => this.setState({phoneNumber: e.target.value})}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="birthdate" className="form-label">Birth Date</label>
-                        <input type="date" name="birthdate" className="form-control" defaultValue={this.state.birthDate}
+                        <input type="date" name="birthdate" className="form-control" defaultValue={type === 'create' ? null : this.state.birthDate}
                                onChange={e => this.setState({birthDate: e.target.value})}/>
                     </div>
                     <hr/>
