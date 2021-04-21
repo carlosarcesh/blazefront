@@ -144,7 +144,7 @@ class App extends React.Component {
         };
 
         return (
-            <BootstrapTable data={customersFiltered || customers} pagination selectRow={selectRowProp} version='4'>
+            <BootstrapTable data={customersFiltered !== null ? customersFiltered : customers} pagination selectRow={selectRowProp} version='4'>
                 <TableHeaderColumn isKey dataField='id' hidden>Customer ID</TableHeaderColumn>
                 <TableHeaderColumn dataField='firstName' dataSort>First Name</TableHeaderColumn>
                 <TableHeaderColumn dataField='lastName' dataSort>Last Name</TableHeaderColumn>
