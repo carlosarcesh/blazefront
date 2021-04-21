@@ -35,7 +35,6 @@ class App extends React.Component {
 
     getCustomers() {
         this.setState({loading: true});
-        this.filterTable();
         axios.get(apiCustomersPath)
             .then(customers => this.setState({customers: customers.data.data, loading: false}))
             .catch(error => {
@@ -144,7 +143,7 @@ class App extends React.Component {
         };
 
         return (
-            <BootstrapTable data={customersFiltered !== null ? customersFiltered : customers} pagination selectRow={selectRowProp} version='4'>
+            <BootstrapTable data={customersFiltered || customers} pagination selectRow={selectRowProp} version='4'>
                 <TableHeaderColumn isKey dataField='id' hidden>Customer ID</TableHeaderColumn>
                 <TableHeaderColumn dataField='firstName' dataSort>First Name</TableHeaderColumn>
                 <TableHeaderColumn dataField='lastName' dataSort>Last Name</TableHeaderColumn>
