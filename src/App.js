@@ -100,11 +100,11 @@ class App extends React.Component {
         const {firstName, lastName, email, phoneNumber, birthDate} = this.state;
 
         this.setState({id,
-            firstName: firstName || row.firstName,
-            lastName: lastName || row.lastName,
-            email: email || row.lastName,
-            phoneNumber: phoneNumber || row.phoneNumber,
-            birthDate: birthDate || row.birthDate
+            firstName: row.firstName,
+            lastName: row.lastName,
+            email: row.email,
+            phoneNumber: row.phoneNumber,
+            birthDate: row.birthDate
         });
     }
 
