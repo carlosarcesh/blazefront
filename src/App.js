@@ -155,16 +155,6 @@ class App extends React.Component {
     }
 
     renderForm(type) {
-		if(type === 'create') {
-			this.setState({
-				id: null,
-				firstName: null,
-				lastName: null,
-				email: null,
-				phoneNumber: null,
-				birthDate: null,
-			});
-		}
         return (
             <div className="row">
                 <div className="col-lg-12">
@@ -197,7 +187,14 @@ class App extends React.Component {
                     <button className="btn btn-primary"
                             onClick={e => {
                                 if(type === 'create') {
-                                    this.createCustomer();
+									this.setState({
+										id: null,
+										firstName: null,
+										lastName: null,
+										email: null,
+										phoneNumber: null,
+										birthDate: null,
+									}, () => this.createCustomer());
                                 } else {
                                     this.updateCustomer();
                                 }
