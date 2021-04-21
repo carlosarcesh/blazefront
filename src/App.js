@@ -6,7 +6,7 @@ import {filter} from "lodash";
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import './App.css';
 
-const apiCustomersPath = 'http://localhost:9090/api/customers';
+const apiCustomersPath = 'https://blazeback.herokuapp.com/api/customers';
 
 class App extends React.Component {
     constructor(props) {
